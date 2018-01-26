@@ -1,6 +1,6 @@
 package myggirl.wangpan.spring.exceptionHandle;
 
-import myggirl.wangpan.spring.exceptionHandle.exception.GirlException;
+import myggirl.wangpan.spring.exceptionHandle.exception.BusinessException;
 import myggirl.wangpan.resultUtils.Result;
 import myggirl.wangpan.resultUtils.ResultUtil;
 import org.slf4j.Logger;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ExceptionHandle {
     private final static Logger logger  = LoggerFactory.getLogger(ExceptionHandle.class);
 
-    @ExceptionHandler(value = Exception.class)
+    @ExceptionHandler(value = java.lang.Exception.class)
     @ResponseBody
-    public Result handle(Exception e) {
-        if(e instanceof GirlException) {
-            GirlException er = (GirlException)e;
+    public Result handle(java.lang.Exception e) {
+        if(e instanceof BusinessException) {
+            BusinessException er = (BusinessException)e;
             return ResultUtil.error(er.getCode(),er.getMessage());
         } else {
             logger.error("[系统异常]{}", e);

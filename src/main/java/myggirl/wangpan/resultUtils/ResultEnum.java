@@ -1,6 +1,7 @@
 package myggirl.wangpan.resultUtils;
 
 public enum ResultEnum {
+    AUTHERROR(413,"您没有权限调用此接口"),
     UNKNOW_ERROR(-1,"未知错误"),
     SUCCESS(0, "成功"),
     PRIMARRY_SCHOOL(100,"你可能在上小学");

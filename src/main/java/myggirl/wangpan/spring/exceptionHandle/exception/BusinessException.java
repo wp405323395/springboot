@@ -2,7 +2,7 @@ package myggirl.wangpan.spring.exceptionHandle.exception;
 
 import myggirl.wangpan.resultUtils.ResultEnum;
 
-public class GirlException extends RuntimeException {
+public class BusinessException extends RuntimeException {
     private Integer code;
 
     public Integer getCode() {
@@ -12,12 +12,12 @@ public class GirlException extends RuntimeException {
         this.code = code;
     }
 
-    public GirlException(ResultEnum resultEnum) {
+    public BusinessException(ResultEnum resultEnum) {
         super(resultEnum.getMsg());
         this.code = resultEnum.getCode();
     }
 
-    public GirlException(int code, String msg) {
+    public BusinessException(int code, String msg) {
         super(msg);
         this.code = code;
     }

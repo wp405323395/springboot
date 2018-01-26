@@ -1,4 +1,4 @@
-package myggirl.wangpan.spring.aspect;
+package myggirl.wangpan.spring.aspect.http;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;

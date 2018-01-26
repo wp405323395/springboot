@@ -1,6 +1,6 @@
 package myggirl.wangpan.controller;
 
-import myggirl.wangpan.spring.exceptionHandle.exception.GirlException;
+import myggirl.wangpan.spring.exceptionHandle.exception.BusinessException;
 import myggirl.wangpan.domain.Girl;
 import myggirl.wangpan.resultUtils.Result;
 import myggirl.wangpan.resultUtils.ResultEnum;
@@ -31,7 +31,7 @@ public class GirlController {
 
     @GetMapping(value = "/err2")
     public void err2(){
-        throw new GirlException(ResultEnum.PRIMARRY_SCHOOL);
+        throw new BusinessException(ResultEnum.PRIMARRY_SCHOOL);
     }
 
     @PostMapping(value = "/findByAge")
@@ -47,7 +47,7 @@ public class GirlController {
     @PostMapping(value = "addGirl")
     public Result<Girl> addGirl(@Valid Girl girl, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
-            throw new GirlException(10,bindingResult.getFieldError().getDefaultMessage());
+            throw new BusinessException(10,bindingResult.getFieldError().getDefaultMessage());
         }
         return ResultUtil.success(girlService.addGirl(girl));
     }
