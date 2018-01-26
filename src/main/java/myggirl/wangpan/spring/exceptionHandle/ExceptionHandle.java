@@ -18,6 +18,7 @@ public class ExceptionHandle {
     public Result handle(java.lang.Exception e) {
         if(e instanceof BusinessException) {
             BusinessException er = (BusinessException)e;
+            //logger.error("[业务异常]{}", e);
             return ResultUtil.error(er.getCode(),er.getMessage());
         } else {
             logger.error("[系统异常]{}", e);
