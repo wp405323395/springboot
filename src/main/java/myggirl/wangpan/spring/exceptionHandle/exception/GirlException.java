@@ -1,4 +1,4 @@
-package myggirl.wangpan.ExceptionHandle.Exception;
+package myggirl.wangpan.spring.exceptionHandle.exception;
 
 import myggirl.wangpan.resultUtils.ResultEnum;
 

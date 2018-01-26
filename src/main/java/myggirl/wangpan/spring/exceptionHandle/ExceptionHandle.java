@@ -1,6 +1,6 @@
-package myggirl.wangpan.ExceptionHandle;
+package myggirl.wangpan.spring.exceptionHandle;
 
-import myggirl.wangpan.ExceptionHandle.Exception.GirlException;
+import myggirl.wangpan.spring.exceptionHandle.exception.GirlException;
 import myggirl.wangpan.resultUtils.Result;
 import myggirl.wangpan.resultUtils.ResultUtil;
 import org.slf4j.Logger;

@@ -1,6 +1,6 @@
 package myggirl.wangpan.controller;
 
-import myggirl.wangpan.ExceptionHandle.Exception.GirlException;
+import myggirl.wangpan.spring.exceptionHandle.exception.GirlException;
 import myggirl.wangpan.domain.Girl;
 import myggirl.wangpan.resultUtils.Result;
 import myggirl.wangpan.resultUtils.ResultEnum;
