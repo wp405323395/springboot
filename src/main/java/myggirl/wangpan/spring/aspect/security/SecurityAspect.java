@@ -27,6 +27,8 @@ public class SecurityAspect {
         System.out.println("拦截调用的方法名称是->"+method.getName());
         if("girlList".equals(method.getName())||
                 "err".equals(method.getName())||
+                "findOne".equals(method.getName())||
+                "findByAge".equals(method.getName())||
                 "addGirl".equals(method.getName())) {
         } else {
             authService.checkAccess();

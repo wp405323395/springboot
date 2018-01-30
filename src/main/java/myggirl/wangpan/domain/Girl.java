@@ -4,10 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
+import java.io.Serializable;
 
 @Entity
-public class Girl {
+public class Girl implements Serializable{
     @Id
     @GeneratedValue
     private  Integer id;
@@ -16,6 +16,11 @@ public class Girl {
     private Integer age;
     public Girl(){
 
+    }
+
+    public Girl(String cupSize, Integer age) {
+        this.cupSize = cupSize;
+        this.age = age;
     }
 
     public Integer getId() {

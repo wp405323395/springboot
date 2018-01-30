@@ -9,7 +9,6 @@ import myggirl.wangpan.resultUtils.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.List;
 
@@ -18,6 +17,7 @@ import java.util.List;
 public class GirlController {
     @Autowired
     private GirlService girlService;
+
     @GetMapping(value = "/girls")
     public Result<List<Girl>> girlList(){
         return ResultUtil.success(girlService.girlList());
@@ -37,6 +37,11 @@ public class GirlController {
     @PostMapping(value = "/findByAge")
     public Result<List<Girl>> findByAge(@RequestParam("age") Integer age) {
         return ResultUtil.success(girlService.findByAge(age));
+    }
+
+    @PostMapping(value = "/findOne")
+    public Result<List<Girl>> findOne(@RequestParam("id") Integer id) {
+        return ResultUtil.success(girlService.findOne(id));
     }
 
     /**
