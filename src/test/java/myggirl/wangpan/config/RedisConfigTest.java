@@ -1,4 +1,4 @@
-package myggirl.wangpan.redis;
+package myggirl.wangpan.config;
 
 import myggirl.wangpan.domain.Girl;
 import myggirl.wangpan.resultUtils.Result;

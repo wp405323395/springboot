@@ -1,4 +1,4 @@
-package myggirl.wangpan.redis;
+package myggirl.wangpan.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
@@ -35,6 +35,7 @@ public class RedisConfig extends CachingConfigurerSupport {
                 return sb.toString();
             }
         };
+
     }
     /**
      * 申明缓存管理器，会创建一个切面（aspect）并触发Spring缓存注解的切点（pointcut）
