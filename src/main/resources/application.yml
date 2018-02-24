@@ -3,14 +3,15 @@ spring:
     active: dev
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/girl
+    url: jdbc:mysql://127.0.0.1:3306/girl?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 123456
-    tomcat:
-      max-idle: 10
-      max-wait: 100000
-      min-idle: 5
-      initial-size: 5
+#    这里是tomcat的数据库连接池，这个项目里用的是c3p0连接池。
+#    tomcat:
+#      max-idle: 10
+#      max-wait: 100000
+#     min-idle: 5
+#     initial-size: 5
 
   jpa:
     hibernate:
@@ -28,4 +29,7 @@ spring:
       min-idle: 0
     timeout: 0
 
-
+mybatis:
+  mybatis_config_file: mybatis-config.xml
+  mapper_path: /mapper/**.xml
+  entity_package: myggirl.wangpan.domains
