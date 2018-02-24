@@ -6,6 +6,12 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/girl
     username: root
     password: 123456
+    tomcat:
+      max-idle: 10
+      max-wait: 100000
+      min-idle: 5
+      initial-size: 5
+
   jpa:
     hibernate:
       ddl-auto: update
