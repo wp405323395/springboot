@@ -21,7 +21,7 @@ public class MybatisDatasourceConfig {
     @Value("${spring.datasource.password}")
     private String jdbcPassword;
 
-    //配置数据库的连接池。c3p0连接池。
+    //配置c3p0连接池。
     @Bean(name = "dataSource")
     public ComboPooledDataSource createDataSource() throws PropertyVetoException {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
