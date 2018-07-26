@@ -29,6 +29,7 @@ public class SecurityAspect {
                 "err".equals(method.getName())||
                 "findOne".equals(method.getName())||
                 "findByAge".equals(method.getName())||
+                "getMsg".equals(method.getName())||
                 "addGirl".equals(method.getName())) {
         } else {
             authService.checkAccess();

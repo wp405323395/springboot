@@ -23,6 +23,11 @@ public class GirlController {
         return ResultUtil.success(girlService.girlList());
     }
 
+    @GetMapping(value = "/getMsg")
+    public Result<String> getMsg(){
+        return ResultUtil.success("ffffffffffffffffffffffffffffffff");
+    }
+
     @GetMapping(value = "/err")
     public void err(){
         int a[] = {};
