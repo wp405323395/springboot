@@ -49,25 +49,25 @@ public class GirlController {
         return ResultUtil.success(girlService.findOne(id));
     }
 
-//    /**
-//     * 这里是用form表单形式传递数据的。
-//     * @param girl
-//     * @return
-//     */
-//    @PostMapping(value = "addGirl")
-//    public Result<Girl> addGirl(@Valid Girl girl, BindingResult bindingResult) {
-//        if(bindingResult.hasErrors()) {
-//            throw new BusinessException(10,bindingResult.getFieldError().getDefaultMessage());
-//        }
-//        return ResultUtil.success(girl);
-//        //return ResultUtil.success(girlService.addGirl(girl));
-//    }
-
     /**
      * 这里是用form表单形式传递数据的。
+     * @param girl
      * @return
      */
-    @PostMapping(value = "/addGirl/age/{age}/cupSize/{cupSize}")
+    @PostMapping(value = "addGirl")
+    public Result<Girl> addGirl(@Valid @RequestBody Girl girl, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()) {
+            throw new BusinessException(10,bindingResult.getFieldError().getDefaultMessage());
+        }
+        return ResultUtil.success(girl);
+        //return ResultUtil.success(girlService.addGirl(girl));
+    }
+
+    /**
+     *
+     * @return
+     */
+    @PostMapping(value = "/addGirlRestFul/age/{age}/cupSize/{cupSize}")
     public Result<Girl> addGirl(@PathVariable Integer age, @PathVariable String cupSize) {
         Girl girl = new Girl();
         girl.setCupSize(cupSize);
