@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.io.Serializable;
 
 @Entity
@@ -13,6 +14,7 @@ public class Girl implements Serializable{
     private  Integer id;
     private String cupSize;
     @Max(value = 150, message = "年龄不是正常的值")
+    @Min(value = 10,message = "年龄太小")
     private Integer age;
     public Girl(){
 
