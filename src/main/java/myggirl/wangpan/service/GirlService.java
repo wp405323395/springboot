@@ -34,6 +34,6 @@ public class GirlService {
 
     @Cacheable("girls")
     public Girl findOne(int id) {
-        return girlRespository.findOne(id);
+        return girlRespository.findById(id).get();
     }
 }
