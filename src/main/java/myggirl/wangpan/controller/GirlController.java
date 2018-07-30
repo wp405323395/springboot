@@ -59,8 +59,7 @@ public class GirlController {
         if(bindingResult.hasErrors()) {
             throw new BusinessException(10,bindingResult.getFieldError().getDefaultMessage());
         }
-        return ResultUtil.success(girl);
-        //return ResultUtil.success(girlService.addGirl(girl));
+        return ResultUtil.success(girlService.addGirl(girl));
     }
 
     /**

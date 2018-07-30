@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 
 @Aspect
 @Component
-public class httpAspect {
-    private final static Logger logger = LoggerFactory.getLogger(httpAspect.class);
+public class HttpAspect {
+    private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
     @Pointcut("execution(public * myggirl.wangpan.controller.GirlController.*(..))")
     public void pc(){}
 
