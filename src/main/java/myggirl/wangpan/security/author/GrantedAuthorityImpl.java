@@ -1,4 +1,4 @@
-package myggirl.wangpan.security;
+package myggirl.wangpan.security.author;
 
 import org.springframework.security.core.GrantedAuthority;
 
