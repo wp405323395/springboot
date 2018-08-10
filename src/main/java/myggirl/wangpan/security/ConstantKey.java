@@ -1,1 +1,1 @@
-package myggirl.wangpan.security;public class ConstantKey {    /**     * 签名key     */    public static final String SIGNING_KEY = "spring-security-@Jwt!&Secret^#";}
+package myggirl.wangpan.security;public class ConstantKey {    /**     * 签名key     */    public static final String SIGNING_KEY = "MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=";}
