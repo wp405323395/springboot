@@ -13,11 +13,6 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * 描述：
- * <p>
- *
- * @author: 赵新国
- * @date: 2018/6/5 18:35
  */
 public class BaseController {
 
