@@ -1,4 +1,4 @@
 server:
   context-path: /
-  port: 8083
+  port: 8080
 myselfppp: "开发环境->path: ${server.context-path}"

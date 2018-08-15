@@ -1,5 +1,7 @@
 package myggirl.wangpan.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import myggirl.wangpan.spring.exceptionHandle.exception.BusinessException;
 import myggirl.wangpan.domain.Girl;
 import myggirl.wangpan.resultUtils.Result;
@@ -12,12 +14,14 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@Api(value = "/school", tags="测试接口模块")
 @RestController
 @RequestMapping("/school")
 public class GirlController {
     @Autowired
     private GirlService girlService;
 
+    @ApiOperation(value="展示首页信息", notes = "展示首页信息")
     @GetMapping(value = "/girls")
     public Result<List<Girl>> girlList(){
         return ResultUtil.success(girlService.girlList());
